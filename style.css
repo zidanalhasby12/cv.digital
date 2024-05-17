@@ -1,0 +1,477 @@
+/* Code yang tidak efektif */
+body {
+    font-family: 'Consolas', monospace;
+    color: #00ff00;
+    background-color: #000;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;    
+    margin: 0 50px; /* Margin kiri dan kanan untuk desktop */
+    min-height: 100vh; /* Pastikan body selalu memenuhi setidaknya tinggi viewport */
+}
+
+@media (minmax-width: 768px) {
+    body {
+        margin: 0 30px; /* Margin kiri dan kanan untuk mobile */
+    }
+}
+
+/* Gaya konten */
+body {
+    font-family: 'Consolas', monospace;
+    color: #00ff00;
+    background-color: #000;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;    
+    margin: 0 50px; /* Margin kiri dan kanan untuk desktop */
+    min-height: 100vh; /* Pastikan body selalu memenuhi setidaknya tinggi viewport */
+}
+
+@media (minmax-width: 768px) {
+    body {
+        margin: 0 30px; /* Margin kiri dan kanan untuk mobile */
+    }
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.putihtua {
+    color: #939393;
+}
+
+.keywords {
+    color: #939393;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+header {
+    background: #333;
+    padding: 10px 0;
+    text-align: center;
+    flex: 0 1 auto;
+}
+
+#intro {
+    margin-top: 30px;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+#intro img {
+    margin-bottom: 10px;
+}
+
+
+.deskripsi {
+    text-align: justify;
+    margin: 0 50px;
+}
+
+#navbar {
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    background-color: #333; /* Warna latar belakang navigasi */
+    z-index: 1000; /* Menempatkan navigasi di atas elemen lain */
+}
+
+/* Mengatur tata letak ul dan li di dalam navbar */
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Membuat teks navbar rata tengah */
+}
+
+#navbar li {
+    float: none; /* Menghapus float agar teks navbar rata tengah */
+}
+
+#navbar li a {
+    display: block;
+    color: #00ff00;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    background-color: #555; /* Warna latar belakang saat dihover */
+}
+
+section {
+    padding: 20px;
+    border-bottom: 1px solid #444;
+}
+
+#intro img {
+    max-width: 150px;
+    border-radius: 75px;
+}
+
+.button-container {
+    text-align: center; /* Rata tengah untuk semua elemen di dalamnya */
+    margin-top: 20px; /* Memberikan sedikit ruang di atas tombol */
+}
+
+.button-container button {
+    background-color: black; /* Warna latar tombol */
+    color: orange; /* Warna teks */
+    border: 2px solid orange; /* Border teks */
+    padding: 10px 20px; /* Padding di dalam tombol */
+    font-size: 16px; /* Ukuran font teks */
+    cursor: pointer; /* Mengubah cursor menjadi pointer ketika di-hover */
+    transition: all 0.3s ease; /* Transisi smooth ketika di-hover */
+}
+
+.button-container button:hover {
+    background-color: #00ff00; /* Warna latar ketika di-hover */
+    color: #000;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between; /* Menyediakan jarak yang proporsional */
+    margin-top: 30px;
+}
+
+.skills-column {
+    flex: 1; /* Mengambil ruang yang sama */
+    padding: 0 15px; /* Menambahkan padding di dalam setiap kolom untuk spacing yang lebih baik */
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill p {
+    margin: 0;
+    font-weight: bold;
+    color: #00FF00; /* Menyamakan warna teks dengan tema */
+}
+
+.skill-level {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: right;
+    font-weight: bold;
+    text-indent: -2em;
+    padding: 3px 0;
+    width: 0; /* Awalnya 0 untuk animasi */
+    animation: growSkill 2s forwards;
+}
+
+/* Animasi bar skill untuk setiap elemen skill-level */
+.skill .sysadmin .skill-level { width: 88%; }
+.skill .mikrotik .skill-level { width: 92%; }
+.skill .aws .skill-level { width: 80%; }
+.skill .data-mining .skill-level { width: 85%; }
+.skill .cisco .skill-level { width: 80%; }
+.skill .teaching .skill-level { width: 97%; }
+
+@keyframes growSkill {
+    from { width: 0; }
+    to { width: 100; } /* Dinamis berdasarkan pengaturan spesifik skill-level di atas */
+}
+
+.random {
+    margin: 0;
+    padding: 0;
+    background: black;
+    /* color: white; */
+    /* font-family: 'Rubik', sans-serif; */
+}
+/* .acak { */
+    /* font-size: 30px;
+    display: block;
+    text-align: center; */
+    /* line-height: 100px; */
+    /* height: 100px; */
+    /* margin-top: 40vh; */
+    /* text-transform: uppercase; */
+    /* letter-spacing: 10px; */
+/* } */
+
+#education {
+    padding: 20px;
+    /* animation: slideUp 2s forwards; */
+}
+
+#konten-2kolom {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    #konten-2kolom {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.education-section, .training-section {
+    margin-bottom: 10px;
+}
+
+.education-section h3 {
+    font-size: 25px;
+}
+
+.position h4 {
+    margin-top: 10px;
+    margin-bottom: 2px;
+    color: #00FF00; /* Warna hijau untuk judul posisi */
+}
+
+.position p {
+    color: #FFFFFF; /* Warna putih untuk keterangan lembaga */
+}
+
+.position li {
+    text-align: justify;
+}
+
+ul {
+    margin-top: 5px;
+    list-style-type: circle; /* atau pilih style list lain yang sesuai */
+    margin-left: 20px; /* Memberi indent pada list */
+    color: #FFFFFF; /* Warna putih untuk teks list */
+}
+
+#work-experience {
+    padding: 20px;
+    /* animation: slideUp 3s forwards; */
+}
+
+.experience-section {
+    margin-bottom: 20px;
+}
+
+.position {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.position h4 {
+    margin-top: 10px;
+    color: #00FF00; /* Warna hijau untuk judul posisi */
+}
+
+.position p {
+    color: #FFFFFF; /* Warna putih untuk keterangan lembaga */
+}
+
+ul {
+    margin-top: 5px;
+    list-style-type: circle; /* atau pilih style list lain yang sesuai */
+    margin-left: 20px; /* Memberi indent pada list */
+    color: #FFFFFF; /* Warna putih untuk teks list */
+}
+
+#projects {
+    padding: 20px;
+}
+
+.konten-3kolom {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .konten-3kolom {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+.project-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-item img {
+    width: 100%; /* Mengatur lebar gambar menjadi 450px */
+}
+
+.project-item img:hover {
+    transform: scale(1.5);
+    transition: transform 0.5s ease; /* Membuat zoom gambar lebih smooth */
+}
+.project-item p {
+    color: #00FF00; /* Warna teks hijau */
+    font-family: 'Consolas', monospace;
+    font-size: 14px; /* Ukuran font disesuaikan */
+    padding: 5px; /* Padding untuk teks */
+}
+
+.logo {
+    max-width: auto;
+    height: 100px;
+    margin-right: 10px; /* Menambahkan jarak antara gambar */
+}
+
+#contact {
+    text-align: center;
+    color: #00FF00;
+}
+
+#contact a {
+    color: #f9f9f9;
+}
+
+footer {
+    flex: 0 1 auto;
+    text-align: center;
+}
+
+/* efek huruf berkedip */
+.kedip {
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  /* efek typewriter */
+.typewriter h3 {
+    color: orange;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .5em solid rgb(255, 166, 0); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+
+  
+/* The typing effect */
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: rgb(255, 166, 0); }
+}
+
+@keyframes slideUp {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+:root {
+    --background: #060608;
+    --color: #FAFAFA;
+  }
+  
+  .fullstack {
+    width: 100%;
+    height: 100%;
+    font-family: Arial;
+  }
+  
+  .fullstack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+  }
+  
+  .container {
+    color: var(--color);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .right {
+    text-align: right;
+    width: 100%;
+  }
+
+  .left {
+    text-align: left;
+    width: 100%;
+  }
+  
+  .stack {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .stack span {
+    font-weight: bold;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    font-size: 4rem;
+    --stack-height: calc(100% / var(--stacks) - 1px);
+    --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+    --clip-top: calc(var(--stack-height) * var(--index));
+    --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+    clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+    animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 2s alternate-reverse;
+  }
+  
+  .stack span:nth-child(odd) { --glitch-translate: 8px; }
+  .stack span:nth-child(even) { --glitch-translate: -8px; }
+  
+  @keyframes stack {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%);
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    };
+    60% {
+      opacity: 0.5;
+      transform: translateX(50%);
+    }
+    80% {
+      transform: none;
+      opacity: 1;
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
+  
+  @keyframes glitch {
+    0% {
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+      transform: translate(var(--glitch-translate));
+    }
+    2% {
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    4%, 100% {  text-shadow: none; transform: none; }
+  }
